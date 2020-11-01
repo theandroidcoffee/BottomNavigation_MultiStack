@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright 2020,
+  ~  *                 ☕ Marco Finadri - theandroidcoffee.com ☕
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *  http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".adder.AdderFragment">
+
+	<data>
+
+		<variable
+			name="adder"
+			type="com.theandroidcoffee.bottomnavigation_multistack.adder.AdderViewModel" />
+	</data>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingHorizontal="8dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginVertical="8dp"
+				android:ellipsize="end"
+				android:maxLines="1"
+				android:padding="4dp"
+				android:text="@{Integer.toString(adder.result)}"
+				android:textAlignment="textEnd"
+				android:textColor="@color/black"
+				android:textSize="56sp" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-10)}"
+					android:text="@string/sub_10" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-9)}"
+					android:text="@string/sub_9" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-8)}"
+					android:text="@string/sub_8" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-7)}"
+					android:text="@string/sub_7" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-6)}"
+					android:text="@string/sub_6" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-5)}"
+					android:text="@string/sub_5" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-4)}"
+					android:text="@string/sub_4" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-3)}"
+					android:text="@string/sub_3" />
+
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-2)}"
+					android:text="@string/sub_2" />
+
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(-1)}"
+					android:text="@string/sub_1" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(1)}"
+					android:text="@string/add_1" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(2)}"
+					android:text="@string/add_2" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(3)}"
+					android:text="@string/add_3" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(4)}"
+					android:text="@string/add_4" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(5)}"
+					android:text="@string/add_5" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(6)}"
+					android:text="@string/add_6" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(7)}"
+					android:text="@string/add_7" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(8)}"
+					android:text="@string/add_8" />
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(9)}"
+					android:text="@string/add_9" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					style="@style/Button"
+					android:onClick="@{() -> adder.add(10)}"
+					android:text="@string/add_10" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</layout>
